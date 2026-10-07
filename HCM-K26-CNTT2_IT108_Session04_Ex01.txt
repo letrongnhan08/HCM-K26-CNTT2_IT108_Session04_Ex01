@@ -1,0 +1,12 @@
+Bài 1 : Khởi tạo cấu trúc dự án bằng Terminal
+Phần 1: Phân tích lỗi:
+Danh sách lỗi:
+- lỗi 1: Nam sử dụng lệnh mkdir "mkdir shopee projects" ,nguyên nhân bị sai phần phân cách dòng do không sử dụng kenab-case,snake_case nên các lệnh như cd ,mkdir,Copy-Item sẽ không sử dụng được
+- lỗi 2: Là "Cannot find path" và nguyên nhân do Nam sử dụng ổ "C/User" mục cá nhân nên khi chuyển máy người khác sẽ không tìm được đường dẫn của Nam
+- lỗi 3: Nam sử dụng Copy-Item cho tệp chưa tồn tại do những thao tác trước như "mkdir shopee projects" thì việc tạo "c:\user\student\shopee project mkdir src\assets\image" sẽ gặp lỗi kỹ thuật không copy được.
+- lỗi 4: Nam sử dụng lệnh cd [ cd shopee projects ] chữ shopee projects không có cách dòng nên buộc cần dấu (") nhưng Nam gõ không có dấu ngoặc kép để bao bọc đường dẫn cho chữ shopee projects
+Phần 2:Viết sửa lại chuỗi câu lệnh PowerShell cho Nam:
+ [ D:\Project> mkdir shopee-projects ]
+ [ D:\Project> cd shopee-projects ]
+ [ D:\Project\shopee-project> mkdir src\assets\image ]
+ [ D:\Project\shopee-project> Copy-Item src -Destination src-backup -Recurse ]
